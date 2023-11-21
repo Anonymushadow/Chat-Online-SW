@@ -1,0 +1,188 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--verde: #39ff14;
+	--verde2: #06aa02;
+	--negro: #000;
+}
+
+body {
+	background-color: #222;
+}
+
+.left, .right {
+	height: 100vh;
+	width: 50%;
+	border: 1px solid var(--verde);
+	color: var(--verde);
+	font-size: 50px;
+}
+
+.left:hover {
+	box-shadow: inset 1px 1px 40px var(--verde);
+	cursor: pointer;
+}
+
+.right:hover {
+	box-shadow: inset 1px 1px 40px var(--verde);
+	cursor: pointer;
+}
+
+.opciones, .imgContacto {
+	height: 100%;
+	width: 100%;
+}
+
+.pantalla, .left, .right {
+	display: grid;
+	place-items: center;
+}
+
+.usuario1, .usuario2 {
+	border-radius: 0 0 10px 10px;
+	max-width: 481px;
+	min-width: 417px;
+	height: 100vh;
+}
+
+.usuario1, .usuario2, .chat, input, .right, .left {
+	background-color: var(--negro);
+}
+
+.hide {
+	top: -9999999999999px;
+	left: -9999999999999px;
+	position: absolute;
+}
+
+.imgContacto, .img {
+	border-radius: 50%;
+}
+
+.img {
+	border: 2px solid var(--negro);
+}
+
+.img, .contacto {
+	height: 60px;
+}
+
+.img, .ajustes {
+	width: 60px;
+}
+
+.contacto {
+	background-color: var(--verde);
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	align-items: center;
+}
+
+.contacto, .chat, .mensajeRedactar {
+	padding: 5px;
+}
+
+.ajustes {
+	height: 100%;
+	border: none;
+	background: var(--verde);
+}
+
+i, .contacto {
+	color: var(--negro);
+	font-size: 30px;
+}
+
+.dialogo {
+	background: #000;
+	height: calc(100% - 90px);
+	overflow-y: auto;   
+	overflow-wrap: break-word;
+}
+
+/*fondo del scroll*/
+.dialogo::-webkit-scrollbar {
+	width: 10px;
+}
+
+li a {
+	cursor: pointer;
+}
+
+/*bara del scroll*/
+.dialogo::-webkit-scrollbar-thumb {
+	background-color: var(--verde);
+	border-radius: 5px;
+}
+
+
+.dialogo, .chat, input{
+	border: 2px solid var(--verde);
+}
+
+
+.chat {
+	margin: 10px 0;
+	max-width: 60%;
+	box-shadow: 2px 2px 50px var(--verde2);
+	color: var(--verde);	
+	display: grid;
+	grid-template-columns: minmax(100px, 300px) 1fr;
+
+}
+
+.izq, .left {
+	float: left;
+}
+
+.derecha, .right {
+	float: right;
+}
+
+.mensajeRedactar {
+	width: 69%;
+}
+
+.mensajeEnviar {
+	width: 30%;
+}
+
+.mensajeEnviar:hover {
+	cursor: pointer;
+}
+
+.mensajeEnviar:active {
+	box-shadow: -1px -1px 10px var(--verde);
+}
+
+.envio, .chat {
+	border-radius: 10px;
+}
+
+input {
+	color: var(--verde);
+	height: 30px;
+	outline: none;
+}
+
+input::placeholder {
+	color: var(--verde2);
+}
+
+.mensajeRedactar {
+	border-radius: 0 10px 10px 10px;
+}
+
+.mensajeEnviar {
+	border-radius: 10px 0 10px 10px;
+}
+
+.envio, .contacto, .left, .right{
+	user-select: none;
+}
+
